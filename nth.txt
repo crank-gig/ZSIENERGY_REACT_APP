@@ -1,0 +1,6 @@
+    #To stage all changes
+git add . 
+    #To commit all changes
+git commit -m <commit message>
+    #To write all changes to the main branch
+git push origin main

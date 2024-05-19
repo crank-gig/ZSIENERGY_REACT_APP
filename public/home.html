@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="../src/component_styles/base.css" rel="stylesheet" type="text/css" charset="utf-8">
+        <link href="../src/component_styles/home.css" rel="stylesheet" type="text/css" charset="utf-8">
+
+        <!--font-->
+        <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet"/> <!--Inter font-->
+        <link href="https://fonts.cdnfonts.com/css/questrial" rel="stylesheet"> <!--Questrial font-->
+        <link href="https://fonts.cdnfonts.com/css/unbounded" rel="stylesheet"> <!--Unbounded font-->
+        <link href="https://fonts.cdnfonts.com/css/newsreader-2" rel="stylesheet"> <!--newsreader font-->
+        <link href="https://fonts.cdnfonts.com/css/lato" rel="stylesheet"> <!--lato font-->
+        <link href="https://fonts.cdnfonts.com/css/be-vietnam-pro" rel="stylesheet">  <!--be-vietnam-pro-->
+        <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">   <!--poppins-->
+        <link href="https://fonts.cdnfonts.com/css/berlin-sans-fb-demi" rel="stylesheet"> <!--berlin-->
+        <link href="https://fonts.cdnfonts.com/css/calibri-light" rel="stylesheet"> <!--calibri-->
+        <link href="https://fonts.cdnfonts.com/css/arial" rel="stylesheet"> <!--Arial-->
+        <link rel="stylesheet" href="fonts/helvetica-normal/stylesheet.css" type="text/css" charset="utf-8"/> <!--Helvetica -->
+                
+                
+        <title>ZSI Energy</title>
+    </head>
+    <body class="home">
+        <div class="top-bar-wrapper">
+            <div class="top-bar">
+                <!--Top header: Icon and Title-->
+                <h1 class="top-heading" id="page-title">ZSI Energy</h1>
+        
+                <!--Menu Buttons-->
+                <button class="menu-btn" onclick=toggleMenu(event) aria-label="Open Menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+        
+                <div class="british-coucil-mnaw"><!--british-council-mobile-no-address-wrapper-->
+                    <!--British membership-->
+                    <img class="british-council-image" src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715975555/british_council_member_icon_db16qc.png" alt="British council Member"/>
+                    <!--mobile-no address wrapper-->
+                    <div class="mobile-no-address-wrapper" role="region" aria-label="Contact Information">
+                        <div class="mobile-no-wrapper">
+                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715975950/telephone_icon_qzmskh.svg" alt="telephone icon" aria-hidden="true"/>
+                            <div class="mnaw-detail">
+                                <span id="mobileNumber">+234 (0) 803 724 7360</span>
+                                <a href="mailto:info@mondorelimited.com">info@mondorelimited.com</a>
+                            </div>
+                        </div>
+                        <div class="location-wrapper">
+                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715975806/location_icon_mgrhkc.svg" alt="location icon" aria-hidden="true"/>
+                            <div class="mnaw-detail">
+                                <span id="address">#100 East/West Road, Rumuokoro, Port Harcourt, Rivers State, Nigeria.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="menu-wrapper" aria-labelledby="page-title" tabindex="-1">
+                <!--Menu Nav List-->
+                <div class="menu-list">
+                    <div class="sub-menu-list">
+                        <ul>
+                            <li>
+                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715976100/home_icon_fhlois.svg" alt="home icon" style="height: auto;">
+                                <div class="menu-highlight">
+                                    <a href="" aria-current="page">
+                                        Home
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715976196/product_icon_cpifrc.svg" alt="product icon" style="height: auto;">
+                                <div>
+                                    <a href="">
+                                        Products
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715976302/about_icon_vv0imc.svg" alt="about us icon" style="height: auto;">
+                                <div>
+                                    <a href="">
+                                        About us
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="menu-contact-button">
+                            <a href="" class="menu-contact-link">
+                                Contact us
+                            </a>
+                        </button>
+                    </div>
+                    <div class="british-coucil-mnaw"><!--british-council-mobile-no-address-wrapper-->
+                        <!--British membership-->
+                        <img class="british-council-image" src="../src/component_media/british_council_member_icon.png" alt="British council Member"/>
+                        <!--mobile-no address wrapper-->
+                        <div class="mobile-no-address-wrapper" role="region" aria-label="Contact Information">
+                            <div class="mobile-no-wrapper">
+                                <img src="../src/component_media/telephone_icon.svg" alt="telephone icon" aria-hidden="true"/>
+                                <div class="mnaw-detail">
+                                    <span id="mobileNumber">+234 (0) 803 724 7360</span>
+                                    <a href="mailto:info@mondorelimited.com">info@mondorelimited.com</a>
+                                </div>
+                            </div>
+                            <div class="location-wrapper">
+                                <img src="../src/component_media/location_icon.svg" alt="location icon" aria-hidden="true"/>
+                                <div class="mnaw-detail">
+                                    <span id="address">#100 East/West Road, Rumuokoro, Port Harcourt, Rivers State, Nigeria.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <main>
+            <section class="hero-section">
+                <div class="hero-image-slider">
+                    <div class="image-slide-wrapper">
+                        <div class="image-slide active">
+                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715442451/men_at_work1_pt4zfz.jpg" alt="Hero Thumbmnail"/>
+                            <!--men at work 1-->
+                            <div class="slide-caption">
+                                <div class="slide-caption-sub slide-caption-sub1">
+                                    Civil Engineering Works
+                                </div>
+                                <div class="slide-caption-sub slide-caption-sub2">
+                                    Building Construction, rehabilitation and maintenance (offshore and onshore)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slide">
+                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813603/ship2_hero_image.jpg" alt="Hero Thumbnail"/>
+                            <!--Maritime services-->
+                            <div class="slide-caption">
+                                <div class="slide-caption-sub slide-caption-sub1">
+                                    Maritime and Logistics Services
+                                </div>
+                                <div class="slide-caption-sub slide-caption-sub2">
+                                    We provide efficient Haulage and redistribution services, Shipping services and more.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slide">
+                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813386/zsienergy/big_pipeline_hero_image.jpg" alt="Hero Thumbnail">
+                            <!--Pipeline stuff-->
+                            <div class="slide-caption">
+                                <div class="slide-caption-sub slide-caption-sub1">
+                                    Pipeline Services
+                                </div>
+                                <div class="slide-caption-sub slide-caption-sub2">
+                                    We provide innovative, cost effective civil works and pipeline solutions that conforms to the high standards in the oil and gas industry.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slide">
+                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813318/stack_hero_image.jpg" alt="Image 4">
+                            <!--Procurement service-->
+                            <div class="slide-caption">
+                                <div class="slide-caption-sub slide-caption-sub1">
+                                    Procurement Services
+                                </div>
+                                <div class="slide-caption-sub slide-caption-sub2">
+                                    We provide efficient procurement services and more.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more images here -->
+                    <div class="hero-slide-buttons">
+                        <button id="prevBtn">&lt;</button>
+                        <button id="nextBtn">&gt;</button>
+                    </div>
+                </div>
+            </section>
+            <!--Overview section-->
+            <section class="overview">
+                <div class="heading-text">
+                    <div class="heading-text-highlight"></div>    
+                    Overview
+                </div>
+                <div class="overview-sub">
+                    <div class="overview-entry">
+                        <div class="overview-sub-text">
+                            <div class="entry-heading">Industry Focus</div>
+                            <p class="entry-detail">
+                                <ul>
+                                    <li>
+                                        Oil and Gas Multinationals such as Shell Petroleum Development
+                                        Company, NAOC, Total E & P, Mobil e.t.c.
+                                    </li>
+                                    <li>
+                                        Government Agencies such as Nigerian Petroleum Development
+                                        Company, (NPDC) Nigerian National Petroleum Corporation (NNPC)
+                                        Nigerian Petroleum Exchange (Nipex).
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="overview-sub-image">
+                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716029741/zsienergy/GettyImages-1233118130-800x534_kdrawd.jpg" alt="Company thumbnail"/>
+                        </div>
+                    </div>
+                    <div class="overview-entry">
+                        <div class="overview-sub-text">
+                            <div class="entry-heading">Value Proposition</div>
+                            <p class="entry-detail">
+                                <ul>
+                                    <li>
+                                        Strong Health, Safety and Environment values, policies and strategies.
+                                    </li>
+                                    <li>
+                                        Strong supporters and participants of the Nigerian Local Content Act
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="overview-sub-image">
+                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716031501/zsienergy/VDC-EMEA-SW-JNB1_2-1200x675_jhotif.jpg" alt="Safety demonstration"/>
+                        </div>
+                    </div>
+                    <div class="overview-entry">
+                        <div class="overview-sub-text">
+                            <div class="entry-heading">Core Solutions</div>
+                            <p class="entry-detail">
+                                <ul>
+                                    <li>
+                                        Marine and Logistics Services Pipeline Services and Civil Works.
+                                    </li>
+                                    <li>
+                                        Information Technology in Oil and Gas.
+                                    </li>
+                                    <li>
+                                        Consultancy Services (Environmental Services, Supply Chain Management, Research
+                                        and Development, Clean and Renewable Energy, etc.)
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="overview-sub-image">
+                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813034/zsienergy/pipeline_hero_image.jpg"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Our services section-->
+            <div class="about-us">
+                <div class="about-us-inner">
+                    <div class="heading-text">
+                        <div class="heading-text-highlight"></div>    
+                            Our <span class="green-highlight">Services</span>
+                    </div>
+                    <div class="about-us-sub">
+                        <!--marine and logistics-->
+                        <div class="about-us-sub-entry">
+                            <div class="about-us-sub-image">
+                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716035900/zsienergy/service_05_in_fgglgn.jpg" alt="Marine view"/>
+                            </div>
+                            <div class="about-us-sub-text">
+                                Marine and Logistics Services<br/>
+                                Marine Fuel supply and Bunkering Services
+                            </div>
+                        </div>
+                        <!--Pipe fabrication-->
+                        <div class="about-us-sub-entry">
+                            <div class="about-us-sub-image">
+                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716037706/zsienergy/Pipe_20Fabrication_roqbhw.jpg" alt="Pipe fabrication workshop"/>
+                            </div>
+                            <div class="about-us-sub-text">
+                                Pipeline and Fabrication Services
+                            </div>
+                        </div>
+                        <!--Civil contruction works-->
+                        <div class="about-us-sub-entry">
+                            <div class="about-us-sub-image">
+                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716037873/zsienergy/dkebufdrkevttwk5ulvh.jpg" alt="Civil construction project"/>
+                            </div>
+                            <div class="about-us-sub-text">
+                                Civil Engineering Works
+                            </div>
+                        </div>
+                        <!--Consultancy and procurement-->
+                        <div class="about-us-sub-entry">
+                            <div class="about-us-sub-image">
+                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716038119/zsienergy/Consultants_kilhac.jpg" alt="Consultancy"/>
+                            </div>
+                            <div class="about-us-sub-text">
+                                Procurement Services</br>
+                                Consultancy Services (Environmental Services,
+                                Supply Chain Management, Research and
+                                Development, Clean and Renewable Energy, etc).
+                            </div>
+                        </div>
+                        <!--Information technology-->
+                        <div class="about-us-sub-entry">
+                            <div class="about-us-sub-image">
+                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716038509/zsienergy/EuroHPC_20entwickelt_20Supercomputer_20f_C3_BCr_20Europa_qu4aps.jpg" alt="Infomation techcnology facility setup"/>
+                            </div>
+                            <div class="about-us-sub-text">
+                                Information Technology
+                            </div>
+                        </div>
+                        <!--Information technology-->
+                        <div class="about-us-sub-entry">
+                            <div class="about-us-sub-image">
+                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716038772/zsienergy/Abfall_Recyclinganlage_azthesmudger_Fotolia_10359498_Subscription_L_za2iri.jpg" alt="Waste management facility"/>
+                            </div>
+                            <div class="about-us-sub-text">
+                                Waste management
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Global clients-->
+            <div class="global-clients">
+                <div class="heading-text">
+                    <div class="heading-text-highlight"></div>    
+                     Global <span class="green-highlight">Clients</span>
+                </div>
+                <div class="slideshow">
+                    <!-- Shell -->
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716042933/zsienergy/Untitled-removebg-preview_zcvuzx.png" alt="Shell icon">
+                    </div>
+                    <!-- Saipem -->
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716043145/zsienergy/Untitled1-removebg-preview_omdwds.png" alt="Saipem icon"/>
+                    </div>
+                    <!-- Seplat -->
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716043185/zsienergy/Seplat-Energy-Logo-e1679000249830-removebg-preview_gwcsuc.png" alt="Seplat icon"/>
+                    </div>
+                    <!-- ndcmb -->
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716043732/zsienergy/ndcmb-removebg-preview_qezhpi.png" alt="ndcmb icon"/>
+                    </div>
+                    <!-- Schlumberger -->
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716044112/zsienergy/2560px-Schlumberger.svg-removebg-preview_ditgwx.png" alt="Schlumberger icon"/>
+                    </div>
+                    <!-- Chevron -->
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716044160/zsienergy/Chevron-Logo-2006-present-removebg-preview_1_kjdksk.png" alt="Chevron icon"/>
+                    </div>
+                    <!-- Agip -->
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716044454/zsienergy/0445d5e2d5dd074c5744c5311b56e7bb_gkyhzr.jpg" alt="Agip icon"/>
+                    </div>
+                    <!-- Total Energies -->
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716044552/zsienergy/totalenergies-removebg-preview_remu5j.png" alt="Total Energies icon"/>
+                    </div>
+                    <!-- LNG -->
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716045198/zsienergy/nigeria-lng-logo-liquefied-natural-gas-business-png-favpng-z580ujg7N5uG0tiSBbWjA3FW6-removebg-preview_eb8jqm.png" alt="LNG icon"/>
+                    </div>
+                </div>
+            </div>
+            <!--About Us-->
+            <section>
+                <div class="about-us-banner">
+                    <img src="">
+                    <div class="about-us-banner-sub">
+                        <div class="banner-note">
+                            We are a powerhouse of technology,
+                            creativity and expertise.
+                        </div>                        
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+    <script>
+
+
+
+        let dropped = false
+
+        //When the dropped is false change the state so the tabindex of the links are hidden
+        const toggleMenu = (e) => {
+            //menu btn element
+            const menuBtn = e.currentTarget.firstElementChild.nextElementSibling;
+            //menu wrapper dropdown
+            const menuDropDown = document.querySelector(".menu-wrapper")
+            
+            const height = menuDropDown.scrollHeight;
+            if(!dropped){
+                menuBtn.style.marginLeft = '10px'
+                menuDropDown.style.height = height+'px'
+                dropped = true
+                //WAI-ARIA
+                menuBtn.ariaLabel = 'Close Menu'
+            }else{
+                menuBtn.style.marginLeft = '0px'
+                menuDropDown.style.height = '0px'
+                dropped = false
+                //WAI-ARIA
+                menuBtn.ariaLabel = 'Open Menu'
+            }
+        }
+
+        const slides = document.querySelectorAll('.image-slide');
+        let currentImageIndex = 0;
+
+        const toggleCaptionAnimation = (param,opt) => {
+            //animate its caption
+            collection = param.getElementsByClassName('slide-caption-sub')
+            
+            if(opt){
+                collection[0].classList.add('bounce');
+                collection[1].classList.add('bounce');
+            }else{
+                collection[0].classList.remove('bounce');
+                collection[1].classList.remove('bounce');
+            }
+        }
+        
+        function showNextImage() {
+            slides[currentImageIndex].classList.remove('active');
+            //unanimate its caption
+            toggleCaptionAnimation(slides[currentImageIndex],false)
+
+            currentImageIndex = (currentImageIndex + 1) % slides.length;
+            slides[currentImageIndex].classList.add('active');
+
+            //animate caption
+            toggleCaptionAnimation(slides[currentImageIndex],true)
+        }
+
+        function showPrevImage() {
+            slides[currentImageIndex].classList.remove('active');
+            //unanimate its caption
+            toggleCaptionAnimation(slides[currentImageIndex],false)
+
+            currentImageIndex = (currentImageIndex - 1 + slides.length) % slides.length;
+            slides[currentImageIndex].classList.add('active');
+
+            //animate caption
+            toggleCaptionAnimation(slides[currentImageIndex],true)
+        }
+
+        setInterval(showNextImage, 7000);
+
+        const nextBtn = document.getElementById('nextBtn');
+        nextBtn.addEventListener('click', showNextImage);
+
+        const prevBtn = document.getElementById('prevBtn');
+        prevBtn.addEventListener('click', showPrevImage);
+    </script>
+</html>

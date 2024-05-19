@@ -1,0 +1,373 @@
+:root{
+  --roboto-font: 'Roboto', sans-serif;
+  --small-font: 14px;
+  --gray: #4B5156;
+  --gray2: rgb(75, 81, 86);
+  --base-color: #00AFAB;
+  --input-wrapper-border: #EBEBEB;
+  --input-wrapper-border2: #ccc;
+  --valid-input-border: #2AC294;
+
+
+  /*Gilroy*/
+  --Gilroy-Bold: 'Gilroy-Bold', sans-serif;
+  --Gilroy-Heavy: 'Gilroy-Heavy', sans-serif;
+  --Gilroy-Light: 'Gilroy-Light', sans-serif;
+  --Gilroy-Medium: 'Gilroy-Medium', sans-serif;
+  --Gilroy-Regular: 'Gilroy-Regular', sans-serif;
+
+  /*Helvetica*/
+  --Helvetica: 'Helvetica', sans-serif;
+  --Helvetica-Light: 'Helvetica Light', sans-serif;
+  
+  /*Unbounded*/
+  --Unbounded-font: 'Unbounded', sans-serif;
+  
+  /*Stencil display*/
+  --stencil-display: 'Big Shoulders Stencil Display', sans-serif;
+  
+  /*stereotones*/
+  --stereotones-font: 'Stereotones', sans-serif;
+
+  /*oswald*/
+  --oswald-font: 'Oswald', sans-serif;
+  --oswald-regular-font: 'Oswald Regular', sans-serif;
+  --oswald-stencil-font: 'Oswald Stencil', sans-serif;
+
+  /*questrial*/
+  --questrial-font: 'Questrial', sans-serif;
+
+  /*inter*/
+  --inter-font: 'Inter', sans-serif;
+
+  /*newsreader*/
+  --newsreader-font: 'Newsreader', sans-serif;
+
+  /*lato font*/
+  --lato-font: 'Lato', sans-serif;
+
+  /*vietnam*/
+  --be-vietnam-pro-font: 'Be Vietnam Pro', sans-serif;
+
+  /*poppins*/
+  --poppins: 'Poppins', sans-serif;
+
+  /*berlin*/
+  --berlin: 'Berlin Sans FB Demi', sans-serif;
+
+  /*calibri*/
+  --calibri: 'Calibri Light', sans-serif;
+
+  /*arial*/
+  --arial: 'Arial', sans-serif;
+  --arial-black: 'Arial Black', sans-serif;
+  --arial-light: 'Arial Light', sans-serif;
+  --arial-ce: 'Arial CE', sans-serif;
+  --arial-ce-mt-black: 'Arial CE MT Black', sans-serif;
+
+  /* App colors*/
+  --bs-blue: #0950b8;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
+  --bs-gray-900: #212529;
+  --bs-primary: #0950b8;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-primary-rgb: 9,80,184;
+  --bs-secondary-rgb: 108,117,125;
+  --bs-success-rgb: 25,135,84;
+  --bs-info-rgb: 13,202,240;
+  --bs-warning-rgb: 255,193,7;
+  --bs-danger-rgb: 220,53,69;
+  --bs-light-rgb: 248,249,250;
+  --bs-dark-rgb: 33,37,41;
+  --bs-white-rgb: 255,255,255;
+  --bs-black-rgb: 0,0,0;
+  --bs-body-color-rgb: 33,37,41;
+  --bs-body-bg-rgb: 255,255,255;
+  --bs-font-sans-serif: "Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --bs-gradient: linear-gradient(180deg,rgba(255,255,255,0.15),rgba(255,255,255,0));
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #212529;
+  --bs-body-bg: #fff;
+
+  --dark-green: rgba(31, 124, 21,0.99);
+  --field-green: #6cbd45;
+  --mid-green: #1f7c3d;
+  --blue-green: #10b97cff;
+  --base-green: #20b20b;
+}
+*{
+  box-sizing: border-box; font-family: var(--arial);
+}
+html{
+  width:100%; overflow-x: hidden; background-color: #F5F6F7
+}
+body{
+  width:100%; margin:0% 0px 0px 0%; overflow-x:hidden; position:relative;
+  background-color: #F5F6F7
+}
+img{
+  font-size: 13px;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+main {
+  padding: 20px 0px;
+  margin-top: 100px;
+  background-color: #FFF;
+}
+
+button{
+  border: none; 
+  background: none;
+}
+button:focus, a:focus{
+  outline: 2px solid var(--bs-gray-500);
+  outline-offset: 5px;
+}
+a{
+    text-decoration: none;
+}
+a:focus{
+  outline-offset: 3px;
+}
+
+/*status colors*/
+.approved{color: #2AC294 !important;} 
+.pending{ color: #F79D38 !important;}
+.rejected{color: #ce0000 !important;}
+.untouched{color: #191C1F !important;}
+
+/*------------------------Top bar---------------------------*/
+.top-bar-wrapper{
+  background: white;
+  position: fixed;
+  width: 100%; top: 0;
+  z-index: 1;
+}
+.top-bar {
+  padding: 1px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 52px;
+  border-bottom: 1px solid var(--bs-gray-200); 
+  padding: 40px 30px; justify-content: space-between;
+  box-shadow: 1px 1px 2px 0px rgba(0,0,62,0.1); 
+
+}
+
+
+/*------------------------Top header---------------------------*/
+.top-heading {
+  text-align: center;
+  color: var(--blue-green);
+  font-family: var(--Unbounded-font);
+  font-size: 30px;
+}
+
+/*------------------------menu---------------------------*/
+.menu-btn{
+  display: flex;
+  width: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px; gap: 5px;
+  cursor: pointer;
+}
+.menu-btn div{
+  width: 100%;
+  height: 3px;
+  background: #4b5156ff;
+  background: #545b60ff;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.5s;
+}
+/*Menu dropdown*/
+.menu-wrapper{
+  padding: 0px 30px;
+  height: 0px; overflow-y: hidden;
+  transition: 0.5s;
+}
+.sub-menu-list{
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.menu-list ul{
+  list-style-type: none;
+  padding: 0px; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.menu-list ul li{
+  display: flex;  
+  align-items: center;
+  gap: 5px;
+}
+.menu-list ul li img{
+  width: 13px;
+}
+.sub-menu-list a{
+  color: var(--bs-dark);
+  transition: 0.5s;
+  padding-bottom: 5px;
+  white-space: nowrap;
+}
+.sub-menu-list li a:hover{
+  color: var(--bs-orange);
+  border-bottom: 1px solid var(--bs-orange);
+}
+
+.menu-contact-button{
+  border: 3px solid #5af1baff;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  width: 170px; height: 50px;
+  margin: auto;
+}
+
+
+/*british council image, telephone and address wrapper*/
+.british-coucil-mnaw{
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-direction: column-reverse;
+}
+.menu-wrapper .british-coucil-mnaw{
+  border-top: 1px solid #DBDBDB;
+  padding: 15px 0px; 
+}
+.british-council-image{
+  width: 100%; max-width: 150px;
+  margin: auto;
+}
+.top-bar .british-coucil-mnaw{
+  display: none
+}
+/*telephone and address wrapper*/
+.mobile-no-address-wrapper{
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.mobile-no-address-wrapper img{
+  width: 20px; height: 20px;
+}
+/*
+  {filter: invert(48%) sepia(40%) saturate(961%) hue-rotate(158deg) brightness(91%) contrast(100%);}
+  afebd6ff
+*/
+.mobile-no-address-wrapper > div{
+  width: 100%;
+  max-width: 300px; 
+  display: flex;
+  gap: 10px;
+}
+.mnaw-detail, .mnaw-detail a{
+  font-size: 14px;
+  color: #3c3b3bff;
+}
+
+
+
+@media screen and (min-width:712px){
+  .menu-list ul{
+      flex-direction: row;
+  }
+  .menu-contact-button{
+    margin: unset !important;
+  }
+  .sub-menu-list a{
+    font-size: 18px;
+  }
+  .sub-menu-list{
+    flex-direction: row;
+    padding-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (min-width:912px){
+  /*----------------- top bar/ top-bar-wrapper -----------------*/
+  .top-bar-wrapper{
+      padding-top: 10px;
+  }
+  .top-bar .british-coucil-mnaw{
+    display: flex; flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .top-bar .mobile-no-address-wrapper>div{
+     max-width: 200px;
+  }
+  .menu-wrapper .british-coucil-mnaw{
+      display: none
+  }
+  /*
+  .mnaw-detail{
+      color: #5f5d5dff;
+  }
+  */
+  .menu-wrapper{
+    height: 100%; 
+    min-height: 1px;
+  }
+  .sub-menu-list{
+    max-width: 1200px;
+    margin: auto;
+  }
+  .sub-menu-list a{
+    font-size: 20px;
+  }
+  .menu-btn{
+      display: none;
+  }
+  /*hero-section*/
+  main{
+    margin-top: 170px;
+  }
+}
+@media screen and (min-width:1024px){
+  .top-heading{
+      font-size: 40px; 
+  }
+  .top-bar{
+      justify-content: space-around;
+  }
+}
