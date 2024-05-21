@@ -6,6 +6,10 @@
         <link href="../src/component_styles/base.css" rel="stylesheet" type="text/css" charset="utf-8">
         <link href="../src/component_styles/home.css" rel="stylesheet" type="text/css" charset="utf-8">
 
+        <!--Favicon-->
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/dhbj763qc/image/upload/v1716384925/zsienergy/logo_ddoql0.png">
+
+
         <!--font-->
         <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet"/> <!--Inter font-->
         <link href="https://fonts.cdnfonts.com/css/questrial" rel="stylesheet"> <!--Questrial font-->
@@ -18,10 +22,9 @@
         <link href="https://fonts.cdnfonts.com/css/calibri-light" rel="stylesheet"> <!--calibri-->
         <link href="https://fonts.cdnfonts.com/css/arial" rel="stylesheet"> <!--Arial-->
         <link rel="stylesheet" href="fonts/helvetica-normal/stylesheet.css" type="text/css" charset="utf-8"/> <!--Helvetica -->
+        
         <!--Zombie Carshel Font Family-->
         <link href="https://fonts.cdnfonts.com/css/zombie-carshel" rel="stylesheet">
-                
-                
                 
         <title>ZSI Energy</title>
     </head>
@@ -29,7 +32,14 @@
         <div class="top-bar-wrapper">
             <div class="top-bar">
                 <!--Top header: Icon and Title-->
-                <h1 class="top-heading" id="page-title">ZSI Energy</h1>
+                <h1 class="top-heading" id="page-title">
+                    <div class="top-heading-img">
+                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716384925/zsienergy/logo_ddoql0.png" alt="logo"/>
+                    </div>
+                    <div class="top-heading-title">
+                        ZSI Energy
+                    </div>   
+                </h1>
         
                 <!--Menu Buttons-->
                 <button class="menu-btn" onclick=toggleMenu(event) aria-label="Open Menu">
@@ -40,18 +50,21 @@
         
                 <div class="british-coucil-mnaw"><!--british-council-mobile-no-address-wrapper-->
                     <!--British membership-->
-                    <img class="british-council-image" src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715975555/british_council_member_icon_db16qc.png" alt="British council Member"/>
+                    <img class="british-council-image" src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715975555/zsienergy/british_council_member_icon_db16qc.png" alt="British council Member"/>
                     <!--mobile-no address wrapper-->
                     <div class="mobile-no-address-wrapper" role="region" aria-label="Contact Information">
                         <div class="mobile-no-wrapper">
-                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715975950/telephone_icon_qzmskh.svg" alt="telephone icon" aria-hidden="true"/>
+                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382732/zsienergy/telephone_icon_doiezu.svg" alt="telephone icon" aria-hidden="true"/>
                             <div class="mnaw-detail">
-                                <span id="mobileNumber">+234 (0) 803 724 7360</span>
-                                <a href="mailto:info@mondorelimited.com">info@mondorelimited.com</a>
+                                <span id="mobileNumber">
+                                    +2348037347360</br>
+                                    +2348071274090
+                                </span>
+                                <a href="mailto:info@zsienergy.com">info@zsienergy.com</a>
                             </div>
                         </div>
                         <div class="location-wrapper">
-                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715975806/location_icon_mgrhkc.svg" alt="location icon" aria-hidden="true"/>
+                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382745/zsienergy/location_icon_hksfwa.svg" alt="location icon" aria-hidden="true"/>
                             <div class="mnaw-detail">
                                 <span id="address">#100 East/West Road, Rumuokoro, Port Harcourt, Rivers State, Nigeria.</span>
                             </div>
@@ -65,7 +78,7 @@
                     <div class="sub-menu-list">
                         <ul>
                             <li>
-                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715976100/home_icon_fhlois.svg" alt="home icon" style="height: auto;">
+                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382440/zsienergy/home_icon_pv2qiz.svg" alt="home icon" style="height: auto;">
                                 <div class="menu-highlight">
                                     <a href="" aria-current="page">
                                         Home
@@ -73,7 +86,7 @@
                                 </div>
                             </li>
                             <li>
-                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715976196/product_icon_cpifrc.svg" alt="product icon" style="height: auto;">
+                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382706/zsienergy/product_icon_mgdf6a.svg" alt="product icon" style="height: auto;">
                                 <div>
                                     <a href="">
                                         Products
@@ -81,7 +94,7 @@
                                 </div>
                             </li>
                             <li>
-                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715976302/about_icon_vv0imc.svg" alt="about us icon" style="height: auto;">
+                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382687/zsienergy/about_us_icon_o5fvj7.svg" alt="about us icon" style="height: auto;">
                                 <div>
                                     <a href="">
                                         About us
@@ -97,18 +110,21 @@
                     </div>
                     <div class="british-coucil-mnaw"><!--british-council-mobile-no-address-wrapper-->
                         <!--British membership-->
-                        <img class="british-council-image" src="../src/component_media/british_council_member_icon.png" alt="British council Member"/>
+                        <img class="british-council-image" src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715975555/zsienergy/british_council_member_icon_db16qc.png" alt="British council Member"/>
                         <!--mobile-no address wrapper-->
                         <div class="mobile-no-address-wrapper" role="region" aria-label="Contact Information">
                             <div class="mobile-no-wrapper">
-                                <img src="../src/component_media/telephone_icon.svg" alt="telephone icon" aria-hidden="true"/>
+                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382732/zsienergy/telephone_icon_doiezu.svg" alt="telephone icon" aria-hidden="true"/>
                                 <div class="mnaw-detail">
-                                    <span id="mobileNumber">+234 (0) 803 724 7360</span>
-                                    <a href="mailto:info@mondorelimited.com">info@mondorelimited.com</a>
+                                    <span id="mobileNumber">
+                                        +2348037347360</br>
+                                        +2348071274090
+                                    </span>
+                                    <a href="mailto:info@zsienergy.com">info@zsienergy.com</a>
                                 </div>
                             </div>
                             <div class="location-wrapper">
-                                <img src="../src/component_media/location_icon.svg" alt="location icon" aria-hidden="true"/>
+                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382745/zsienergy/location_icon_hksfwa.svg" alt="location icon" aria-hidden="true"/>
                                 <div class="mnaw-detail">
                                     <span id="address">#100 East/West Road, Rumuokoro, Port Harcourt, Rivers State, Nigeria.</span>
                                 </div>
@@ -324,42 +340,6 @@
                      Global <span class="green-highlight">Clients</span>
                 </div>
                 <div class="slideshow">
-                    <!-- Shell -->
-                    <div class="slide">
-                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716042933/zsienergy/Untitled-removebg-preview_zcvuzx.png" alt="Shell icon">
-                    </div>
-                    <!-- Saipem -->
-                    <div class="slide">
-                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716043145/zsienergy/Untitled1-removebg-preview_omdwds.png" alt="Saipem icon"/>
-                    </div>
-                    <!-- Seplat -->
-                    <div class="slide">
-                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716043185/zsienergy/Seplat-Energy-Logo-e1679000249830-removebg-preview_gwcsuc.png" alt="Seplat icon"/>
-                    </div>
-                    <!-- ndcmb -->
-                    <div class="slide">
-                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716043732/zsienergy/ndcmb-removebg-preview_qezhpi.png" alt="ndcmb icon"/>
-                    </div>
-                    <!-- Schlumberger -->
-                    <div class="slide">
-                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716044112/zsienergy/2560px-Schlumberger.svg-removebg-preview_ditgwx.png" alt="Schlumberger icon"/>
-                    </div>
-                    <!-- Chevron -->
-                    <div class="slide">
-                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716044160/zsienergy/Chevron-Logo-2006-present-removebg-preview_1_kjdksk.png" alt="Chevron icon"/>
-                    </div>
-                    <!-- Agip -->
-                    <div class="slide">
-                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716044454/zsienergy/0445d5e2d5dd074c5744c5311b56e7bb_gkyhzr.jpg" alt="Agip icon"/>
-                    </div>
-                    <!-- Total Energies -->
-                    <div class="slide">
-                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716044552/zsienergy/totalenergies-removebg-preview_remu5j.png" alt="Total Energies icon"/>
-                    </div>
-                    <!-- LNG -->
-                    <div class="slide">
-                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716045198/zsienergy/nigeria-lng-logo-liquefied-natural-gas-business-png-favpng-z580ujg7N5uG0tiSBbWjA3FW6-removebg-preview_eb8jqm.png" alt="LNG icon"/>
-                    </div>
                 </div>
             </div>
             <!--About Us-->
@@ -869,6 +849,113 @@
                     </div>
                 </section>
             </div>
+            <!--Footer-->
+            <footer>
+                <section>
+                    <!--Complimentaty close-->
+                    <div class="footer-note">
+                        <div class="footer-entry-title">
+                            ZSI Energy
+                        </div>
+                        <div class="footer-note-brief">
+                            Building a strong and distinctive reputation for delivering high-quality, efficient services to the energy and natural resource industry in Nigeria.
+                        </div>
+                        <div class="address">
+                            <div>
+                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382745/zsienergy/location_icon_hksfwa.svg" alt="location icon"/>
+                            </div>
+                            <ul>
+                                <li>
+                                    No. 100, East West Road Rumuokoro,</br>
+                                    Port Harcourt, Rivers State
+                                </li>
+                                <li>
+                                    1755, 5th Floor, Forum Building, Frans Indongo</br>
+                                    Street, CBD, Windhoek, Namibia
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--List of services-->
+                    <div class="footer-services">
+                        <div class="footer-entry-title">
+                            Services
+                        </div>
+                        <ul>
+                            <li>
+                                Marine and Logistics Services
+                            </li>
+                            <li>
+                                Marine Fuel supply and Bunkering Services 
+                            </li>
+                            <li>
+                                Pipeline and Fabrication Services 
+                            </li>
+                            <li>
+                                Civil Engineering Works
+                            </li>
+                            <li>
+                                Procurement Services
+                            </li>
+                            <li>
+                                Consultancy Services 
+                            </li>
+                            <li>
+                                Information Technology
+                            </li>
+                            <li>
+                                Waste management
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Links-->
+                    <div class="footer-links">
+                        <div class="footer-entry-title">
+                            Explore
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="">Products</a>
+                            </li>
+                            <li>
+                                <a href="">About us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Contact info-->
+                    <div class="footer-connect">
+                        <div class="footer-entry-title">
+                            Connect
+                        </div>
+                        <div class="phone-no">
+                            <div>
+                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382732/zsienergy/telephone_icon_doiezu.svg" alt="Telephone icon"/>
+                            </div>
+                            <ul>
+                                <li>
+                                    +2348037347360
+                                </li>
+                                <li>
+                                    +2348071274090
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="email">
+                            <div>
+                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382762/zsienergy/email_icon_wf0hil.svg" alt="email icon"/>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="mailto:info@zsienergy.com">info@zsienergy.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <div class="copyright-note">
+                    All Right Reserved © ZSI ENERGY LIMITED 2024
+                </div>
+            </footer>
         </main>
     </body>
     <script>
@@ -992,5 +1079,82 @@
 			}
 		}
 
+        
+        /*-------image slide functionality-------*/
+        const lt400=window.matchMedia('(max-width:400px)');
+        const lt912=window.matchMedia('(max-width:912px)');
+        const gt912=window.matchMedia('(min-width:912px)');
+        const lt1280=window.matchMedia('(max-width:1280px)');
+        const gt1280=window.matchMedia('(min-width:1280px)');
+        let slideInterval;
+
+        if(lt400.matches){
+            slideInterval=2000
+        }else if(!(lt400.matches) && (lt912.matches)){
+            slideInterval=3000
+        }else if((gt912.matches) && (lt1280.matches)){
+            slideInterval=4000
+        }else if((gt1280.matches)){
+            slideInterval=5000
+        }
+
+        let counter=0
+        const wW=window.innerWidth
+        const slideShow = document.querySelector('.slideshow')
+
+        const imgSrcList = [
+            'https://res.cloudinary.com/dhbj763qc/image/upload/v1716042933/zsienergy/Untitled-removebg-preview_zcvuzx.png$Shell icon',
+            'https://res.cloudinary.com/dhbj763qc/image/upload/v1716043145/zsienergy/Untitled1-removebg-preview_omdwds.png$Saipem icon',
+            'https://res.cloudinary.com/dhbj763qc/image/upload/v1716043185/zsienergy/Seplat-Energy-Logo-e1679000249830-removebg-preview_gwcsuc.png$Seplat icon',
+            'https://res.cloudinary.com/dhbj763qc/image/upload/v1716043732/zsienergy/ndcmb-removebg-preview_qezhpi.png$ndcmb icon',
+            'https://res.cloudinary.com/dhbj763qc/image/upload/v1716044112/zsienergy/2560px-Schlumberger.svg-removebg-preview_ditgwx.png$Schlumberger icon',
+            'https://res.cloudinary.com/dhbj763qc/image/upload/v1716044160/zsienergy/Chevron-Logo-2006-present-removebg-preview_1_kjdksk.png$Chevron icon',
+            'https://res.cloudinary.com/dhbj763qc/image/upload/v1716044454/zsienergy/0445d5e2d5dd074c5744c5311b56e7bb_gkyhzr.jpg$Agip icon',
+            'https://res.cloudinary.com/dhbj763qc/image/upload/v1716044552/zsienergy/totalenergies-removebg-preview_remu5j.png$Total Energies icon',
+            'https://res.cloudinary.com/dhbj763qc/image/upload/v1716045198/zsienergy/nigeria-lng-logo-liquefied-natural-gas-business-png-favpng-z580ujg7N5uG0tiSBbWjA3FW6-removebg-preview_eb8jqm.png$LNG icon'
+        ];
+
+        setInterval(
+            ()=>{
+
+                //create the slide element
+                const slide = document.createElement('div');
+                slide.className = 'slide';
+
+                //create the img element for the slide
+                const slideImage = document.createElement('img');
+                slideImage.src = imgSrcList[counter].split('$')[0]
+                slideImage.alt = imgSrcList[counter].split('$')[1]
+
+                //append the image
+                slide.append(slideImage)
+
+                /*
+                append the slide element to the slideshow element
+                and give it a transition duration according the the viewport width
+                */
+                slideShow.append(slide);
+                slide.style.transitionDuration=`${(wW*20)/1330}s`
+
+                /*
+                Listen for the transition end on the slide element, 
+                to know when to remove the element
+                */
+                slide.ontransitionend=(e)=>{
+                    e.target.remove()
+                }
+
+                //translate the element
+                setTimeout(()=>{
+                    slide.style.transform=`translateX(-${wW+300}px)`
+                },1000)
+
+                counter++
+                if(counter===imgSrcList.length){
+                    counter=0
+                }
+            }, 
+            slideInterval
+        )
     </script>
 </html>

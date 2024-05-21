@@ -1,0 +1,20 @@
+{
+  "short_name": "ZSI Energy",
+  "name": "ZSI ENERGY LIMITED",
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/dhbj763qc/image/upload/v1716388164/zsienergy/logo192x192_ehr8zk.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://res.cloudinary.com/dhbj763qc/image/upload/v1716388205/zsienergy/logo128x128_a7p9gu.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#20b20bff",
+  "background_color": "#ffffff"
+}
