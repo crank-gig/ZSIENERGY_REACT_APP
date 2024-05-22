@@ -65,6 +65,9 @@
   --arial-ce: 'Arial CE', sans-serif;
   --arial-ce-mt-black: 'Arial CE MT Black', sans-serif;
 
+  /*Zombie Carshel*/
+  --zombie-carshel: 'Zombie Carshel', sans-serif;
+
   /* App colors*/
   --bs-blue: #0950b8;
   --bs-indigo: #6610f2;
@@ -191,7 +194,7 @@ a:focus{
 /*------------------------Top header---------------------------*/
 .top-heading {
   text-align: center;
-  color: var(--blue-green);
+  color: var(--base-green);
   font-family: var(--Unbounded-font);
   font-size: 30px;
 }
@@ -327,6 +330,10 @@ a:focus{
   /*----------------- top bar/ top-bar-wrapper -----------------*/
   .top-bar-wrapper{
       padding-top: 10px;
+      box-shadow:1px 1px 10px 0px rgba(0,0,62,0.1); 
+  }
+  .top-bar{
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.0); 
   }
   .top-bar .british-coucil-mnaw{
     display: flex; flex-direction: row-reverse;
@@ -369,5 +376,10 @@ a:focus{
   }
   .top-bar{
       justify-content: space-around;
+  }
+}
+@media screen and (min-width:1280px){
+  main{
+      margin-top: 200px;
   }
 }
