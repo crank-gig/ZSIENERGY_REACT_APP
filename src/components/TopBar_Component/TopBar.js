@@ -1,8 +1,14 @@
 import React,{useState} from 'react';
+import { useLocation } from 'react-router-dom';
 import TopBarSub from './TopBarSub';
 
 const TopBar = () => {
 	const [dropped,setDropped] = useState(false)
+	
+	const location = useLocation();
+	const getHighlightStyle = (path) => {
+	  return location.pathname === path ? { borderBottom: '1px solid var(--bs-orange)' } : {};
+	};
 
 	const toggleMenu = (e) => {
 		//menu btn element
@@ -31,7 +37,12 @@ const TopBar = () => {
 		<div className="top-bar">
 			{/* Top header: Icon and Title */}
 			<h1 className="top-heading" id="page-title">
-			ZSI Energy
+				<div className="top-heading-img">
+					<img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716384925/zsienergy/logo_ddoql0.png" alt="logo"/>
+				</div>
+				<div className="top-heading-title">
+					ZSI Energy
+				</div>   
 			</h1>
 
 			{/* Menu Buttons */}
@@ -40,9 +51,9 @@ const TopBar = () => {
 				onClick={(e) => toggleMenu(e)}
 				aria-label="Open Menu"
 			>
-			<div></div>
-			<div></div>
-			<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
 			</button>
 
 			{/*british-council-icon mobile-no-address-wrapper*/}
@@ -54,31 +65,35 @@ const TopBar = () => {
 				<div className="sub-menu-list">
 					<ul>
 						<li>
-							<img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715976100/home_icon_fhlois.svg" alt="home icon" style={{ height: 'auto' }} />
+							<img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382440/zsienergy/home_icon_pv2qiz.svg" alt="home icon" style={{height: "auto"}}/>
 							<div className="menu-highlight">
-							<a href="" aria-current="page">
-								Home
-							</a>
+								<a href="/" aria-current="page" style={getHighlightStyle('/')}>
+									Home
+								</a>
 							</div>
 						</li>
 						<li>
-							<img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715976196/product_icon_cpifrc.svg" alt="product icon" style={{ height: 'auto' }} />
+							<img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382706/zsienergy/product_icon_mgdf6a.svg" alt="product icon" style={{height: "auto"}}/>
 							<div>
-							<a href="">Products</a>
+								<a href="/products" style={getHighlightStyle('/products')}>
+									Products
+								</a>
 							</div>
 						</li>
 						<li>
-							<img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715976302/about_icon_vv0imc.svg" alt="about us icon" style={{ height: 'auto' }} />
+							<img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382687/zsienergy/about_us_icon_o5fvj7.svg" alt="about us icon" style={{height: "auto"}}/>
 							<div>
-							<a href="">About us</a>
+								<a href="/about" style={getHighlightStyle('/about')}>
+									About us
+								</a>
 							</div>
 						</li>
-						</ul>
-						<button className="menu-contact-button">
-						<a href="" className="menu-contact-link">
+					</ul>
+					<button className="menu-contact-button">
+						<a href="mailto:info@zsienergy.com" className="menu-contact-link">
 							Contact us
 						</a>
-						</button>
+					</button>
 				</div>
 				{/*british-council-icon mobile-no-address-wrapper*/}
 				<TopBarSub/>

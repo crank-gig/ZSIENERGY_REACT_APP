@@ -1,12 +1,9 @@
 @import url("base.css");
 
 
-section{
-    width: 100%; max-width: 1200px; margin: auto;
-    margin-bottom: 100px;
-}
 
 
+/*----------------------Home hero slideshow -------------*/
 .hero-image-slider {
     position: relative;
     width: 100%;
@@ -113,18 +110,6 @@ section{
     left: 0;
 }
 
-/*Generic*/
-.heading-text{
-    font: normal 400 35px/30px var(--arial-ce-mt-black);
-    margin-bottom: 40px;
-    color: #000;
-}
-.heading-text-highlight{
-    width: 80px; 
-    height: 10px;
-    background-color: var(--base-green);
-    margin: 0px 0px 5px 10px;
-}
 
 /*-----------------------------------overview --------------------------*/
 .overview{
@@ -201,41 +186,6 @@ section{
     padding-top: 10px;
 }
 
-/*-----------------------Slideshow --------------*/
-.global-clients{
-    margin-bottom: 100px;
-}
-.global-clients .heading-text{
-    /*
-    background: #5f5d5dff;
-    */
-    width: 100%; max-width: 1200px; margin: auto;
-    margin-bottom: 50px; padding-left: 20px;
-}
-.slideshow {
-    position: relative;
-    width: 100%;
-    height: 150px;
-    overflow: hidden;
-}
-.slide {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 200px;
-    height: 120px;
-    transition-property: transform; 
-    transition-timing-function: linear;
-}
-
-@keyframes slide {
-    0% {
-        left: 100%;
-    }
-    100% {
-        left: -100%;
-    }
-}
 
 /*----------------------About us -------------*/
 .about-us-banner{
@@ -310,6 +260,7 @@ section{
 .jobs-executed{
     background-color: #ebedebff;
     padding: 50px 20px;
+    margin-bottom: 100px;
 }
 .jobs-executed>section{
     margin-bottom: 0px;
@@ -393,14 +344,7 @@ section{
     font-size: 16px;
 }
 
-/*Generic*/
-.heading-text-highlight2{
-    background-color: #242424ff;
-    margin-top: 5px; 
-    height: 5px;
-    border-radius: 3px;
-    width: 50px;
-}
+
 
 /*----------------------our partners -------------*/
 .our-partners{
@@ -497,57 +441,19 @@ section{
     padding-top: 30px;
 }
 
-footer{
-    background-color: #f4f4f4;
+
+/*----------------------Product page brief -------------*/
+.product-page-brief{
+    padding-top: 50px;
 }
-footer img{
-    width: 20px;
-}
-footer section{
-    padding: 50px 30px;
-    margin-bottom: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.footer-note{
-    max-width: 350px;
-}
-footer .email, footer .phone-no, footer .address{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-footer ul{
-    list-style-type: none;
-    padding: 0px;
-    color: #585d65ff;
-}
-footer ul li{
-    margin-bottom: 10px;
-    font-size: 15px;
-}
-.footer-entry-title{
-    color: #313945ff;
-    font-size: 20px;
-}
-.footer-note .footer-entry-title{
-    margin-bottom: 20px;
-}
-.footer-note-brief, footer a{
-    color: #585d65ff;
-}
-.copyright-note{
-    border-top: 1px solid #dcdcdcff;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    color: #313945ff;
-    font-size: 14px;
+.product-page-brief p{
+    color: var(--bs-gray-700);
+    font-size: 16px;
 }
 
 
 @media screen and (min-width:712px){
+    /*------Home hero slideshow-------*/
     .slide-caption{
         padding-left: 100px;
     }
@@ -560,6 +466,7 @@ footer ul li{
     }
 }
 @media screen and (min-width:912px){
+    /*------Overview-------*/
     .overview-entry{
         display: flex;
         align-items: center;
