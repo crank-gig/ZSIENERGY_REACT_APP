@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link href="../src/component_styles/base.css" rel="stylesheet" type="text/css" charset="utf-8">
         <link href="../src/component_styles/home.css" rel="stylesheet" type="text/css" charset="utf-8">
+        <!--animate on scroll css-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
         <!--Favicon-->
         <link rel="icon" type="image/png" href="https://res.cloudinary.com/dhbj763qc/image/upload/v1716388164/zsienergy/logo192x192_ehr8zk.png">
@@ -27,6 +30,9 @@
         <link href="https://fonts.cdnfonts.com/css/zombie-carshel" rel="stylesheet">
                 
         <title>ZSI Energy</title>
+        <script src="base.js" defer></script>
+        <!--animate on scroll js-->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </head>
     <body class="home">
         <div class="top-bar-wrapper">
@@ -137,73 +143,93 @@
             </nav>
         </div>
         <main>
-            <section class="hero-section first-section">
+            <div 
+                class="home-hero-section first-section" 
+                id="home-hero-section"
+                lazy="targeted-func"
+            >
                 <div class="hero-image-slider">
                     <div class="image-slide-wrapper">
                         <div class="image-slide active">
-                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715442451/men_at_work1_pt4zfz.jpg" alt="Hero Thumbmnail"/>
+                            <img 
+                                src="../src/component_media/placeholder.jpg"
+                                img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715442451/men_at_work1_pt4zfz.jpg" 
+                                alt="Hero Thumbmnail"
+                                lazy
+                            />
                             <!--men at work 1-->
                             <div class="slide-caption">
                                 <div class="slide-caption-sub slide-caption-sub1">
                                     Civil Engineering Works
                                 </div>
-                                <div class="slide-caption-sub slide-caption-sub2">
+                                <div class="slide-caption-sub slide-caption-sub2 slid-up-text">
                                     Building Construction, rehabilitation and maintenance (offshore and onshore)
                                 </div>
                             </div>
                         </div>
                         <div class="image-slide">
-                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813603/ship2_hero_image.jpg" alt="Hero Thumbnail"/>
+                            <img 
+                                src="../src/component_media/placeholder.jpg"
+                                img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813603/ship2_hero_image.jpg" 
+                                alt="Hero Thumbnail"
+                                lazy
+                            />
                             <!--Maritime services-->
                             <div class="slide-caption">
                                 <div class="slide-caption-sub slide-caption-sub1">
                                     Maritime and Logistics Services
                                 </div>
-                                <div class="slide-caption-sub slide-caption-sub2">
+                                <div class="slide-caption-sub slide-caption-sub2 slid-up-text">
                                     We provide efficient Haulage and redistribution services, Shipping services and more.
                                 </div>
                             </div>
                         </div>
                         <div class="image-slide">
-                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813386/zsienergy/big_pipeline_hero_image.jpg" alt="Hero Thumbnail">
+                            <img 
+                                src="../src/component_media/placeholder.jpg"
+                                img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813386/zsienergy/big_pipeline_hero_image.jpg" 
+                                alt="Hero Thumbnail"
+                                lazy
+                            >
                             <!--Pipeline stuff-->
                             <div class="slide-caption">
                                 <div class="slide-caption-sub slide-caption-sub1">
                                     Pipeline Services
                                 </div>
-                                <div class="slide-caption-sub slide-caption-sub2">
+                                <div class="slide-caption-sub slide-caption-sub2 slid-up-text">
                                     We provide innovative, cost effective civil works and pipeline solutions that conforms to the high standards in the oil and gas industry.
                                 </div>
                             </div>
                         </div>
                         <div class="image-slide">
-                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813318/stack_hero_image.jpg" alt="Image 4">
+                            <img 
+                                src="../src/component_media/placeholder.jpg"
+                                img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813318/stack_hero_image.jpg" 
+                                alt="Image 4"
+                                lazy
+                            >
                             <!--Procurement service-->
                             <div class="slide-caption">
                                 <div class="slide-caption-sub slide-caption-sub1">
                                     Procurement Services
                                 </div>
-                                <div class="slide-caption-sub slide-caption-sub2">
+                                <div class="slide-caption-sub slide-caption-sub2 slid-up-text">
                                     We provide efficient procurement services and more.
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Add more images here -->
-                    <div class="hero-slide-buttons">
-                        <button id="prevBtn">&lt;</button>
-                        <button id="nextBtn">&gt;</button>
-                    </div>
                 </div>
-            </section>
+            </div>
             <!--Overview section-->
-            <section class="overview">
+            <div class="overview">
                 <div class="heading-text">
                     <div class="heading-text-highlight"></div>    
                     Overview
                 </div>
                 <div class="overview-sub">
-                    <div class="overview-entry">
+                    <div data-aos="fade-up" class="overview-entry">
                         <div class="overview-sub-text">
                             <div class="entry-heading">Industry Focus</div>
                             <p class="entry-detail">
@@ -220,11 +246,23 @@
                                 </ul>
                             </p>
                         </div>
-                        <div class="overview-sub-image">
-                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716029741/zsienergy/GettyImages-1233118130-800x534_kdrawd.jpg" alt="Company thumbnail"/>
+                        <div class="overview-sub-image" id="overview-sub-image1">
+                            <img 
+                                src="../src/component_media/placeholder.jpg"
+                                img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716029741/zsienergy/GettyImages-1233118130-800x534_kdrawd.jpg" 
+                                alt="Company thumbnail"
+                                lazy=""
+                            />
+                            <img 
+                                data-aos="fade-up" 
+                                src="../src/component_media/placeholder.jpg"
+                                img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716029741/zsienergy/GettyImages-1233118130-800x534_kdrawd.jpg" 
+                                alt="Company thumbnail"
+                                lazy=""
+                            />
                         </div>
                     </div>
-                    <div class="overview-entry">
+                    <div data-aos="fade-up" class="overview-entry">
                         <div class="overview-sub-text">
                             <div class="entry-heading">Value Proposition</div>
                             <p class="entry-detail">
@@ -239,10 +277,22 @@
                             </p>
                         </div>
                         <div class="overview-sub-image">
-                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716031501/zsienergy/VDC-EMEA-SW-JNB1_2-1200x675_jhotif.jpg" alt="Safety demonstration"/>
+                            <img 
+                                src="../src/component_media/placeholder.jpg"
+                                img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716031501/zsienergy/VDC-EMEA-SW-JNB1_2-1200x675_jhotif.jpg" 
+                                alt="Safety demonstration"
+                                lazy=""
+                            />
+                            <img 
+                                data-aos="fade-up" 
+                                src="../src/component_media/placeholder.jpg"
+                                img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716031501/zsienergy/VDC-EMEA-SW-JNB1_2-1200x675_jhotif.jpg" 
+                                alt="Safety demonstration"
+                                lazy=""
+                            />
                         </div>
                     </div>
-                    <div class="overview-entry">
+                    <div data-aos="fade-up" class="overview-entry">
                         <div class="overview-sub-text">
                             <div class="entry-heading">Core Solutions</div>
                             <p class="entry-detail">
@@ -261,11 +311,23 @@
                             </p>
                         </div>
                         <div class="overview-sub-image">
-                            <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813034/zsienergy/pipeline_hero_image.jpg" alt="Core Solution Offerings"/>
+                            <img 
+                                src="../src/component_media/placeholder.jpg"
+                                img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813034/zsienergy/pipeline_hero_image.jpg" 
+                                alt="Core Solution Offerings"
+                                lazy=""
+                            />
+                            <img 
+                                data-aos="fade-up"
+                                src="../src/component_media/placeholder.jpg"
+                                img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813034/zsienergy/pipeline_hero_image.jpg" 
+                                alt="Core Solution Offerings"
+                                lazy=""
+                            />
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
             <!--Our services section-->
             <div class="our-services">
                 <div class="our-services-inner">
@@ -275,9 +337,14 @@
                     </div>
                     <div class="our-services-sub">
                         <!--marine and logistics-->
-                        <div class="our-services-sub-entry">
+                        <div data-aos="fade-up" class="our-services-sub-entry">
                             <div class="our-services-sub-image">
-                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716035900/zsienergy/service_05_in_fgglgn.jpg" alt="Marine view"/>
+                                <img 
+                                    src="../src/component_media/placeholder.jpg" 
+                                    img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716035900/zsienergy/service_05_in_fgglgn.jpg" 
+                                    alt="Marine view"
+                                    lazy=""
+                                />
                             </div>
                             <div class="our-services-sub-text">
                                 Marine and Logistics Services<br/>
@@ -285,27 +352,42 @@
                             </div>
                         </div>
                         <!--Pipe fabrication-->
-                        <div class="our-services-sub-entry">
+                        <div data-aos="fade-up" class="our-services-sub-entry">
                             <div class="our-services-sub-image">
-                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716037706/zsienergy/Pipe_20Fabrication_roqbhw.jpg" alt="Pipe fabrication workshop"/>
+                                <img 
+                                    src="../src/component_media/placeholder.jpg"
+                                    img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716037706/zsienergy/Pipe_20Fabrication_roqbhw.jpg" 
+                                    alt="Pipe fabrication workshop"
+                                    lazy=""
+                                />
                             </div>
                             <div class="our-services-sub-text">
                                 Pipeline and Fabrication Services
                             </div>
                         </div>
                         <!--Civil contruction works-->
-                        <div class="our-services-sub-entry">
+                        <div data-aos="fade-up" class="our-services-sub-entry">
                             <div class="our-services-sub-image">
-                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716037873/zsienergy/dkebufdrkevttwk5ulvh.jpg" alt="Civil construction project"/>
+                                <img 
+                                    src="../src/component_media/placeholder.jpg"
+                                    img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716037873/zsienergy/dkebufdrkevttwk5ulvh.jpg" 
+                                    alt="Civil construction project"
+                                    lazy=""
+                                />
                             </div>
                             <div class="our-services-sub-text">
                                 Civil Engineering Works
                             </div>
                         </div>
                         <!--Consultancy and procurement-->
-                        <div class="our-services-sub-entry">
+                        <div data-aos="fade-up" class="our-services-sub-entry">
                             <div class="our-services-sub-image">
-                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716038119/zsienergy/Consultants_kilhac.jpg" alt="Consultancy"/>
+                                <img 
+                                    src="../src/component_media/placeholder.jpg"
+                                    img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716038119/zsienergy/Consultants_kilhac.jpg" 
+                                    alt="Consultancy"
+                                    lazy=""
+                                />
                             </div>
                             <div class="our-services-sub-text">
                                 Procurement Services</br>
@@ -315,18 +397,28 @@
                             </div>
                         </div>
                         <!--Information technology-->
-                        <div class="our-services-sub-entry">
+                        <div data-aos="fade-up" class="our-services-sub-entry">
                             <div class="our-services-sub-image">
-                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716038509/zsienergy/EuroHPC_20entwickelt_20Supercomputer_20f_C3_BCr_20Europa_qu4aps.jpg" alt="Infomation techcnology facility setup"/>
+                                <img 
+                                    src="../src/component_media/placeholder.jpg"
+                                    img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716038509/zsienergy/EuroHPC_20entwickelt_20Supercomputer_20f_C3_BCr_20Europa_qu4aps.jpg" 
+                                    alt="Infomation techcnology facility setup"
+                                    lazy=""
+                                />
                             </div>
                             <div class="our-services-sub-text">
                                 Information Technology
                             </div>
                         </div>
                         <!--Information technology-->
-                        <div class="our-services-sub-entry">
+                        <div data-aos="fade-up" class="our-services-sub-entry">
                             <div class="our-services-sub-image">
-                                <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716038772/zsienergy/Abfall_Recyclinganlage_azthesmudger_Fotolia_10359498_Subscription_L_za2iri.jpg" alt="Waste management facility"/>
+                                <img 
+                                    src="../src/component_media/placeholder.jpg"
+                                    img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716038772/zsienergy/Abfall_Recyclinganlage_azthesmudger_Fotolia_10359498_Subscription_L_za2iri.jpg" 
+                                    alt="Waste management facility"
+                                    lazy=""
+                                />
                             </div>
                             <div class="our-services-sub-text">
                                 Waste management
@@ -852,26 +944,40 @@
                 </section>
             </div>
             <!--Product page brief-->
-            <section class="product-page-brief">
-                <div class="heading-text">
-                    <div class="heading-text-highlight"></div>    
-                    Your Partner in <span class="green-highlight">Industrial Innovation</span>
+            <div class="product-page-brief">
+                <div class="product-hero-image-wrapper">
+                    <img 
+                        src="../src/component_media/placeholder.jpg"
+                        img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716998707/zsienergy/shivendu-shukla-3yoTPuYR9ZY-unsplash_exssny.jpg" 
+                        alt="Hero Thumbmnail"
+                        lazy=""
+                    />
+                    <div class="slide-caption">
+                        <div class="slide-caption-sub1" role="heading" aria-level="1">
+                            Your Partner in Industrial Innovation
+                        </div>
+                    </div>
                 </div>
-                <p>
-                    We have a plan to develop a dynamic and
-                    successful company that provides innovative
-                    and quality service delivery in engineering &
-                    procurement services to clients in the oil and
-                    gas industry.
-                    To develop exceptional values to our clients in
-                    the areas of engineering, procurement, marine
-                    logistics, haulage, freight forwarding services,
-                    pipeline services and project management with
-                    regard to the environmental protection, health
-                    and safety Utilizing technology and local
-                    resources to the maximum.
-                </p>
-            </section>
+                <div>
+                    <div class="heading-text" role="heading" aria-level="2">
+                        <span class="green-highlight">Building for the best</span>
+                    </div>
+                    <p>
+                        We have a plan to develop a dynamic and
+                        successful company that provides innovative
+                        and quality service delivery in engineering &
+                        procurement services to clients in the oil and
+                        gas industry.
+                        To develop exceptional values to our clients in
+                        the areas of engineering, procurement, marine
+                        logistics, haulage, freight forwarding services,
+                        pipeline services and project management with
+                        regard to the environmental protection, health
+                        and safety Utilizing technology and local
+                        resources to the maximum.
+                    </p>
+                </div>
+            </div>
             <!--Footer-->
             <footer>
                 <section>
@@ -983,8 +1089,6 @@
     </body>
     <script>
 
-
-
         let dropped = false
 
         //When the dropped is false change the state so the tabindex of the links are hidden
@@ -1013,50 +1117,51 @@
         const slides = document.querySelectorAll('.image-slide');
         let currentImageIndex = 0;
 
-        const toggleCaptionAnimation = (param,opt) => {
-            //animate its caption
-            collection = param.getElementsByClassName('slide-caption-sub')
-            
-            if(opt){
-                collection[0].classList.add('bounce');
-                collection[1].classList.add('bounce');
-            }else{
-                collection[0].classList.remove('bounce');
-                collection[1].classList.remove('bounce');
-            }
+        /*Function to animate sliding up characters*/
+        const slideCharacterUp = (charactersContainer) => {
+            const text = charactersContainer.textContent.trim();
+            charactersContainer.innerHTML = '';
+
+            text.split('').forEach(char => {
+                const span = document.createElement('span');
+                span.classList.add('char');
+                if (char === ' ') {
+                    span.innerHTML = '&nbsp;';
+                } else {
+                    span.textContent = char;
+                }
+                charactersContainer.appendChild(span);
+            });
+
+            const chars = charactersContainer.querySelectorAll('.char');
+
+            let delay = 0;
+            chars.forEach((char, index) => {
+                setTimeout(() => {
+                    char.classList.add('visible');
+                }, delay);
+                delay += 100; // Delay for each subsequent character
+            });
         }
+   
         
         function showNextImage() {
             slides[currentImageIndex].classList.remove('active');
             //unanimate its caption
-            toggleCaptionAnimation(slides[currentImageIndex],false)
+            //toggleCaptionAnimation(slides[currentImageIndex],false)
 
             currentImageIndex = (currentImageIndex + 1) % slides.length;
             slides[currentImageIndex].classList.add('active');
 
             //animate caption
-            toggleCaptionAnimation(slides[currentImageIndex],true)
+            const collection = slides[currentImageIndex].getElementsByClassName('slide-caption-sub')
+            slideCharacterUp(collection[1])
         }
 
-        function showPrevImage() {
-            slides[currentImageIndex].classList.remove('active');
-            //unanimate its caption
-            toggleCaptionAnimation(slides[currentImageIndex],false)
-
-            currentImageIndex = (currentImageIndex - 1 + slides.length) % slides.length;
-            slides[currentImageIndex].classList.add('active');
-
-            //animate caption
-            toggleCaptionAnimation(slides[currentImageIndex],true)
-        }
-
-        setInterval(showNextImage, 7000);
-
-        const nextBtn = document.getElementById('nextBtn');
-        nextBtn.addEventListener('click', showNextImage);
-
-        const prevBtn = document.getElementById('prevBtn');
-        prevBtn.addEventListener('click', showPrevImage);
+        /*change the hero image slide and animate the sub-caption*/
+        setInterval(showNextImage, 11000);
+        //animate the first element
+        slideCharacterUp(document.querySelector('.slide-caption-sub2'))
 
 
 
@@ -1137,6 +1242,7 @@
             'https://res.cloudinary.com/dhbj763qc/image/upload/v1716045198/zsienergy/nigeria-lng-logo-liquefied-natural-gas-business-png-favpng-z580ujg7N5uG0tiSBbWjA3FW6-removebg-preview_eb8jqm.png$LNG icon'
         ];
 
+        
         setInterval(
             ()=>{
 
@@ -1179,5 +1285,29 @@
             }, 
             slideInterval
         )
+    
+        /*useEffect*/
+
+        //give the main a margin-top
+        document.querySelector("main").style.marginTop = document.querySelector('.top-bar-wrapper').offsetHeight+'px';
+
+        /*
+        fade-left and right for the
+        overview entries when the viewport width is above 912px 
+        */
+        if(gt912.matches){
+           const overviewEntryList = document.querySelectorAll('.overview-entry')
+           const fadeArray = ['fade-right','fade-left']
+           for (let i = 0; i < overviewEntryList.length; i++ ){
+                //Get the direct children of the parents
+                const directDivChildren = overviewEntryList[i].querySelectorAll(':scope > div')
+                //Add the transition property on direct child elements
+                directDivChildren[0].setAttribute("data-aos",fadeArray[(i%2)])
+                directDivChildren[1].setAttribute("data-aos",fadeArray[((i+1) % 2)])
+           }
+        }
+
+        //initialize animate on scroll
+        AOS.init();
     </script>
 </html>

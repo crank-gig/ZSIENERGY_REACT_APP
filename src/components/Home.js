@@ -1,4 +1,7 @@
 import React,{useEffect} from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import '../component_styles/home.css';
 
 import TopBar from './TopBar_Component/TopBar';
@@ -7,61 +10,82 @@ import OurServices from './Our_Services';
 import JobsExecuted from './Jobs_Executed';
 import Footer from './Footer';
 
+//placeholder for lazy loading
+import placeholderImage from '../component_media/placeholder.jpg';
 
 const Home = () => {
 
 	useEffect(()=>{
+
+		/*
+			fade-left and right for the
+			overview entries when the viewport width is above 912px 
+        */
+		const gt912=window.matchMedia('(min-width:912px)');
+        if(gt912.matches){
+			const overviewEntryList = document.querySelectorAll('.overview-entry')
+			const fadeArray = ['fade-right','fade-left']
+			for (let i = 0; i < overviewEntryList.length; i++ ){
+				 //Get the direct children of the parents
+				 const directDivChildren = overviewEntryList[i].querySelectorAll(':scope > div')
+				 //Add the transition property on direct child elements
+				 directDivChildren[0].setAttribute("data-aos",fadeArray[(i%2)])
+				 directDivChildren[1].setAttribute("data-aos",fadeArray[((i+1) % 2)])
+			}
+		}
+
+		
+		/*Function to animate sliding up characters*/		
 		const slides = document.querySelectorAll('.image-slide');
         let currentImageIndex = 0;
 
-        const toggleCaptionAnimation = (param,opt) => {
-            //animate its caption
-            const collection = param.getElementsByClassName('slide-caption-sub')
-            
-            if(opt){
-                collection[0].classList.add('bounce');
-                collection[1].classList.add('bounce');
-            }else{
-                collection[0].classList.remove('bounce');
-                collection[1].classList.remove('bounce');
-            }
-        }
+		const slideCharacterUp = (charactersContainer) => {
+			const text = charactersContainer.textContent.trim();
+			charactersContainer.innerHTML = '';
+
+			text.split('').forEach(char => {
+				const span = document.createElement('span');
+				span.classList.add('char');
+				if (char === ' ') {
+					span.innerHTML = '&nbsp;';
+				} else {
+					span.textContent = char;
+				}
+				charactersContainer.appendChild(span);
+			});
+
+			const chars = charactersContainer.querySelectorAll('.char');
+
+			let delay = 0;
+			chars.forEach((char, index) => {
+				setTimeout(() => {
+					char.classList.add('visible');
+				}, delay);
+				delay += 100; // Delay for each subsequent character
+			});
+		}
         
         function showNextImage() {
             slides[currentImageIndex].classList.remove('active');
-            slides[currentImageIndex].setAttribute('aria-hidden','true');
             //unanimate its caption
-            toggleCaptionAnimation(slides[currentImageIndex],false)
+            //toggleCaptionAnimation(slides[currentImageIndex],false)
 
             currentImageIndex = (currentImageIndex + 1) % slides.length;
-            slides[currentImageIndex].setAttribute('aria-hidden','false');
             slides[currentImageIndex].classList.add('active');
 
             //animate caption
-            toggleCaptionAnimation(slides[currentImageIndex],true)
+            const collection = slides[currentImageIndex].getElementsByClassName('slide-caption-sub')
+            slideCharacterUp(collection[1])
         }
 
-        function showPrevImage() {
-            slides[currentImageIndex].classList.remove('active');
-			slides[currentImageIndex].setAttribute('aria-hidden','true');
-            //unanimate its caption
-            toggleCaptionAnimation(slides[currentImageIndex],false)
+        /*change the hero image slide and animate the sub-caption*/
+        setInterval(showNextImage, 11000);
+		
+        //animate the first element
+        slideCharacterUp(document.querySelector('.slide-caption-sub2'))
 
-            currentImageIndex = (currentImageIndex - 1 + slides.length) % slides.length;
-			slides[currentImageIndex].setAttribute('aria-hidden','false');
-            slides[currentImageIndex].classList.add('active');
-
-            //animate caption
-            toggleCaptionAnimation(slides[currentImageIndex],true)
-        }
-
-        setInterval(showNextImage, 7000);
-
-        const nextBtn = document.getElementById('nextBtn');
-        nextBtn.addEventListener('click', showNextImage);
-
-        const prevBtn = document.getElementById('prevBtn');
-        prevBtn.addEventListener('click', showPrevImage);
+		//initialize animate on scroll
+		AOS.init();
 	},[])
 
 	return (
@@ -72,148 +96,192 @@ const Home = () => {
 			{/*Main element*/}
 			<main>
 				{/*Hero section*/}
-				<section className="hero-section first-section" aria-label="Hero Section">
+				<div 
+					className="home-hero-section first-section" 
+					aria-label="Hero Section"
+
+					id="home-hero-section"
+                	lazy="targeted-func"
+				>
 					<div className="hero-image-slider" aria-roledescription="carousel">
 						<div className="image-slide-wrapper">
-							<div className="image-slide active" aria-hidden="false">
+							{/*Civil Engineering works*/}
+							<div className="image-slide active" aria-hidden="false" >
 								<img
-									src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715442451/zsienergy/men_at_work_hero_image.jpg"
+									src={placeholderImage}
+									img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717016325/zsienergy/michal-pech-NV3xhNJTaw0-unsplash_ct43o3.jpg"
 									alt="Civil Engineering Works"
+									lazy=""
 								/>
 								<div className="slide-caption">
 									<div className="slide-caption-sub slide-caption-sub1">
 										Civil Engineering Works
 									</div>
-									<div className="slide-caption-sub slide-caption-sub2">
+									<div className="slide-caption-sub slide-caption-sub2 slid-up-text">
 										Building Construction, rehabilitation and maintenance (offshore and onshore)
 									</div>
 								</div>
 							</div>
+							{/*Maritime and Logistics Services*/}
 							<div className="image-slide" aria-hidden="true">
 								<img
-									src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813603/zsienergy/ship2_hero_image.jpg"
+									src={placeholderImage}
+									img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813603/zsienergy/ship2_hero_image.jpg"
 									alt="Maritime and Logistics Services"
+									lazy=""
 								/>
 								<div className="slide-caption">
 									<div className="slide-caption-sub slide-caption-sub1">
 										Maritime and Logistics Services
 									</div>
-									<div className="slide-caption-sub slide-caption-sub2">
+									<div className="slide-caption-sub slide-caption-sub2 slid-up-text">
 										We provide efficient Haulage and redistribution services, Shipping services and more.
 									</div>
 								</div>
 							</div>
+							{/*Pipeline services*/}
 							<div className="image-slide" aria-hidden="true">
 								<img
-									src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813386/zsienergy/big_pipeline_hero_image.jpg"
+									src={placeholderImage}
+									img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717017075/zsienergy/belinda-fewings-WlSQD_9c4uY-unsplash_1_ke0lst.jpg"
 									alt="Pipeline Services"
+									lazy=""
 								/>
 								<div className="slide-caption">
 									<div className="slide-caption-sub slide-caption-sub1">
 										Pipeline Services
 									</div>
-									<div className="slide-caption-sub slide-caption-sub2">
+									<div className="slide-caption-sub slide-caption-sub2 slid-up-text">
 										We provide innovative, cost effective civil works and pipeline solutions that conforms to the high standards in the oil and gas industry.
 									</div>
 								</div>
 							</div>
+							{/*Procurement services*/}
 							<div className="image-slide" aria-hidden="true">
 								<img
-									src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813318/zsienergy/stack_hero_image.jpg"
+									src={placeholderImage}
+									img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717020563/zsienergy/scott-blake-x-ghf9LjrVg-unsplash_1_boabhd.jpg"
 									alt="Procurement Services"
+									lazy=""
 								/>
 								<div className="slide-caption">
 									<div className="slide-caption-sub slide-caption-sub1">
 										Procurement Services
 									</div>
-									<div className="slide-caption-sub slide-caption-sub2">
+									<div className="slide-caption-sub slide-caption-sub2 slid-up-text">
 										We provide efficient procurement services and more.
 									</div>
 								</div>
 							</div>
 						</div>
-						<div className="hero-slide-buttons">
-							<button id="prevBtn" aria-label="Previous slide" aria-controls="carousel">&lt;</button>
-							<button id="nextBtn" aria-label="Next slide" aria-controls="carousel">&gt;</button>
-						</div>
 					</div>
-				</section>
+				</div>
 				{/*<!--Overview section-->*/}
 				<section className="overview" aria-labelledby="overview-heading">
 					<div className="heading-text">
-						<div className="heading-text-highlight"></div>
+						<div className="heading-text-highlight" data-aos="fade-up"></div>
 						Overview
 					</div>
 					<div className="overview-sub">
-						<div className="overview-entry">
-						<div className="overview-sub-text">
-							<div className="entry-heading" aria-level="3">Industry Focus</div>
-							<div className="entry-detail">
-							<ul>
-								<li>
-									Oil and Gas Multinationals such as Shell Petroleum Development
-									Company, NAOC, Total E & P, Mobil e.t.c.
-								</li>
-								<li>
-									Government Agencies such as Nigerian Petroleum Development
-									Company, (NPDC) Nigerian National Petroleum Corporation (NNPC)
-									Nigerian Petroleum Exchange (Nipex).
-								</li>
-							</ul>
-							</div>
-						</div>
-						<div className="overview-sub-image">
-							<img
-							src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716029741/zsienergy/GettyImages-1233118130-800x534_kdrawd.jpg"
-							alt="Company thumbnail"
-							/>
-						</div>
-						</div>
-						<div className="overview-entry">
-						<div className="overview-sub-text">
-							<div className="entry-heading" aria-level="3">Value Proposition</div>
-							<div className="entry-detail">
-							<ul>
-								<li>
-									Strong Health, Safety and Environment values, policies and strategies.
-								</li>
-								<li>
-									Strong supporters and participants of the Nigerian Local Content Act
-								</li>
-							</ul>
-							</div>
-						</div>
-						<div className="overview-sub-image">
-							<img
-							src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716031501/zsienergy/VDC-EMEA-SW-JNB1_2-1200x675_jhotif.jpg"
-							alt="Safety demonstration"
-							/>
-						</div>
-						</div>
-						<div className="overview-entry">
-						<div className="overview-sub-text">
-							<div className="entry-heading" aria-level="3">Core Solutions</div>
-							<div className="entry-detail">
+						{/*Industry focus*/}
+						<div data-aos="fade-up" className="overview-entry">
+							<div className="overview-sub-text" >
+								<div className="entry-heading" role="heading" aria-level="3">Industry Focus</div>
+								<div className="entry-detail">
 								<ul>
 									<li>
-										Marine and Logistics Services Pipeline Services and Civil Works.
+										Oil and Gas Multinationals such as Shell Petroleum Development
+										Company, NAOC, Total E & P, Mobil e.t.c.
 									</li>
 									<li>
-										Information Technology in Oil and Gas.
-									</li>
-									<li>
-										Consultancy Services (Environmental Services, Supply Chain Management, Research
-										and Development, Clean and Renewable Energy, etc.)
+										Government Agencies such as Nigerian Petroleum Development
+										Company, (NPDC) Nigerian National Petroleum Corporation (NNPC)
+										Nigerian Petroleum Exchange (Nipex).
 									</li>
 								</ul>
+								</div>
+							</div>
+							<div className="overview-sub-image" >
+								<img
+									src={placeholderImage}
+									img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717018014/zsienergy/ant-rozetsky-SLIFI67jv5k-unsplash_lhvoxy.jpg"
+									alt="Company thumbnail"
+									lazy=""
+								/>
+								<img 
+									data-aos="fade-up" 
+									src={placeholderImage}
+									img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717018269/zsienergy/istockphoto-1455690288-170667a_hszfdw.webp"
+									alt="Company thumbnail"
+									lazy=""
+								/>
 							</div>
 						</div>
-						<div className="overview-sub-image">
-							<img
-							src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813034/zsienergy/pipeline_hero_image.jpg"
-							alt="Core Solution Offerings"
-							/>
+						{/*Value Proposition*/}
+						<div data-aos="fade-up" className="overview-entry">
+							<div className="overview-sub-text">
+								<div className="entry-heading" aria-level="3">Value Proposition</div>
+								<div className="entry-detail">
+								<ul>
+									<li>
+										Strong Health, Safety and Environment values, policies and strategies.
+									</li>
+									<li>
+										Strong supporters and participants of the Nigerian Local Content Act.
+									</li>
+								</ul>
+								</div>
+							</div>
+							<div className="overview-sub-image">
+								<img
+									src={placeholderImage}
+									img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717018501/zsienergy/nathan-waters-j7q-Z9DV3zw-unsplash_1_aoydkw.jpg"
+									alt="Safety demonstration"
+									lazy=""
+									/>
+								<img 
+									data-aos="fade-up"
+									src={placeholderImage} 
+									img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716031501/zsienergy/VDC-EMEA-SW-JNB1_2-1200x675_jhotif.jpg"
+									alt="Safety demonstration"
+									lazy=""
+								/>
+							</div>
 						</div>
+						{/*Core solutions*/}
+						<div data-aos="fade-up" className="overview-entry">
+							<div className="overview-sub-text">
+								<div className="entry-heading" aria-level="3">Core Solutions</div>
+								<div className="entry-detail">
+									<ul>
+										<li>
+											Marine and Logistics Services Pipeline Services and Civil Works.
+										</li>
+										<li>
+											Information Technology in Oil and Gas.
+										</li>
+										<li>
+											Consultancy Services (Environmental Services, Supply Chain Management, Research
+											and Development, Clean and Renewable Energy, etc.)
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div className="overview-sub-image">
+								<img
+									src={placeholderImage}
+									img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717018593/zsienergy/joakim-honkasalo-hyj_RRTzJjo-unsplash_qoaf9z.jpg"
+									alt="Core Solution Offerings"
+									lazy=""
+									/>
+								<img 
+									data-aos="fade-up"
+									src={placeholderImage}
+									img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1715813034/zsienergy/pipeline_hero_image.jpg"
+									alt="Core Solution Offerings"
+									lazy=""
+								/>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -238,77 +306,77 @@ const Home = () => {
 						</p>
 						<div className="partners-wrapper">
 							{/*<!--Minerva-->*/}
-							<div className="partner-entry" role="article" aria-labelledby="minerva-heading">
+							<div data-aos="fade-up" className="partner-entry" role="article" aria-labelledby="minerva-heading">
 								<div>
 									<h3 id="minerva-heading">Minerva Bunkering</h3>
 									<p>Marine fuel supply and bunkering services.</p>
 								</div>
 							</div>
 							{/*<!--Ultra filter GMBH-->*/}
-							<div className="partner-entry" role="article" aria-labelledby="ultrafilter-heading">
+							<div data-aos="fade-up" className="partner-entry" role="article" aria-labelledby="ultrafilter-heading">
 								<div>
 									<h3 id="ultrafilter-heading">Ultrafilter GMBH</h3>
 									<p>Filters, Dryers and Filtration Systems.</p>
 								</div>
 							</div>
 							{/*<!--Holo earth-->*/}
-							<div className="partner-entry" role="article" aria-labelledby="holo-earth-heading">
+							<div data-aos="fade-up" className="partner-entry" role="article" aria-labelledby="holo-earth-heading">
 								<div>
 									<h3 id="holo-earth-heading">Holo Earth Limited</h3>
 									<p>Waste Management Services.</p>
 								</div>
 							</div>
 							{/*<!--Boston strategies international-->*/}
-							<div className="partner-entry" role="article" aria-labelledby="boston-strategies-heading">
+							<div data-aos="fade-up" className="partner-entry" role="article" aria-labelledby="boston-strategies-heading">
 								<div>
 									<h3 id="boston-strategies-heading">Boston Strategies International</h3>
 									<p>Supply Chain Management.</p>
 								</div>
 							</div>
 							{/*<!--Marking Services Incorporated-->*/}
-							<div className="partner-entry" role="article" aria-labelledby="marking-services-heading">
+							<div data-aos="fade-up" className="partner-entry" role="article" aria-labelledby="marking-services-heading">
 								<div>
 									<h3 id="marking-services-heading">Marking Services Incorporated</h3>
 									<p>Asset tagging.</p>
 								</div>
 							</div>
 							{/*<!--Davites Export Limited-->*/}
-							<div className="partner-entry" role="article" aria-labelledby="davites-heading">
+							<div data-aos="fade-up" className="partner-entry" role="article" aria-labelledby="davites-heading">
 								<div>
 									<h3 id="davites-heading">Davites Export Limited</h3>
 									<p>Logistics and Procurement.</p>
 								</div>
 							</div>
 							{/*<!--Energy Exemplar-->*/}
-							<div className="partner-entry" role="article" aria-labelledby="energy-exemplar-heading">
+							<div data-aos="fade-up" className="partner-entry" role="article" aria-labelledby="energy-exemplar-heading">
 								<div>
 									<h3 id="energy-exemplar-heading">Energy Exemplar</h3>
 									<p>Renewable Energy Resources.</p>
 								</div>
 							</div>
 							{/*<!--Catobi Nigeria Limited-->*/}
-							<div className="partner-entry" role="article" aria-labelledby="catobi-heading">
+							<div data-aos="fade-up" className="partner-entry" role="article" aria-labelledby="catobi-heading">
 								<div>
 									<h3 id="catobi-heading">Catobi Nigeria Limited</h3>
 									<p>PSV Installation and Maintenance.</p>
 								</div>
 							</div>
 							{/*<!--Busch Vacuum Pumps and Systems-->*/}
-							<div className="partner-entry" role="article" aria-labelledby="busch-vacuum-heading">
+							<div data-aos="fade-up" className="partner-entry" role="article" aria-labelledby="busch-vacuum-heading">
 								<div>
 									<h3 id="busch-vacuum-heading">Busch Vacuum Pumps and Systems</h3>
 									<p>Vacuum Pumps and Compressor.</p>
 								</div>
 							</div>
 							{/*<!--Karin Protective Clothing-->*/}
-							<div className="partner-entry" role="article" aria-labelledby="karin-heading">
+							<div data-aos="fade-up" className="partner-entry" role="article" aria-labelledby="karin-heading">
 								<div>
 									<h3 id="karin-heading">Karin Protective Clothing</h3>
 									<p>Personal Protective Equipment.</p>
 								</div>
 							</div>
 							{/*<!--Karin Protective Clothing-->*/}
-							<div className="partner-entry" role="article" aria-labelledby="safetyplus-heading">
+							<div data-aos="fade-up" className="partner-entry" role="article" aria-labelledby="safetyplus-heading">
 								<div>
 									<h3 id="safetyplus-heading">SafetyPlus</h3>
 									<p>Personal Protective Equipment.</p>
