@@ -17,12 +17,16 @@ const Footer = () => {
                     </div>
                     <ul>
                         <li>
-                        No. 100, East West Road Rumuokoro,<br />
-                        Port Harcourt, Rivers State
+                            No. 100, East West Road Rumuokoro,<br />
+                            Port Harcourt, Rivers State
                         </li>
                         <li>
-                        1755, 5th Floor, Forum Building, Frans Indongo<br />
-                        Street, CBD, Windhoek, Namibia
+                            1755, 5th Floor, Forum Building, Frans Indongo<br />
+                            Street, CBD, Windhoek, Namibia
+                        </li>
+                        <li>
+                            12802 Crow Valley Ln,<br/>
+                            Houston, TX 77099, USA
                         </li>
                     </ul>
                 </div>
@@ -55,7 +59,9 @@ const Footer = () => {
             </div>
             {/* Contact info */}
             <div className="footer-connect">
-                <div className="footer-entry-title">Connect</div>
+                <div className="footer-entry-title">
+                    Get in Touch
+                </div>
                 <div className="phone-no">
                     <div>
                         <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382732/zsienergy/telephone_icon_doiezu.svg" alt="Telephone icon" />
