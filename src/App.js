@@ -16,7 +16,7 @@ function App() {
         document.querySelector("main").style.marginTop = document.querySelector('.top-bar-wrapper').offsetHeight+'px';
 
         /*Progressive loading and selective functionality*/
-        const doStuffs = (item,observer) => {
+        const doStuffs = (item) => {
           /*
           Runs if the element is an image
           */
@@ -58,7 +58,7 @@ function App() {
           const observer=new IntersectionObserver((items,observer)=>{
               items.forEach((item)=>{
                   if (item.isIntersecting){
-                      doStuffs(item.target,observer)
+                      doStuffs(item.target)
                       //stop observing
                       //observer.unobserve(item.target)
                   }

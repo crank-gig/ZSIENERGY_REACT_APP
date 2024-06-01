@@ -109,7 +109,7 @@ const Home = () => {
 							<div className="image-slide active" aria-hidden="false" >
 								<img
 									src={placeholderImage}
-									img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717016325/zsienergy/michal-pech-NV3xhNJTaw0-unsplash_ct43o3.jpg"
+									img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717242853/zsienergy/civil_enginerring_works_q5bgcq.jpg"
 									alt="Civil Engineering Works"
 									lazy=""
 								/>

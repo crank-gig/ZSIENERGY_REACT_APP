@@ -40,9 +40,11 @@ const TopBar = () => {
 				<div className="top-heading-img">
 					<img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716384925/zsienergy/logo_ddoql0.png" alt="logo"/>
 				</div>
+				{/*
 				<div className="top-heading-title">
 					ZSI Energy
 				</div>   
+				*/}
 			</h1>
 
 			{/* Menu Buttons */}
