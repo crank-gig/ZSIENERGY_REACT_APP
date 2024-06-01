@@ -22,12 +22,12 @@ const Footer = () => {
                     </div>
                     <ul>
                         <li>
-                        No. 100, East West Road Rumuokoro,<br />
-                        Port Harcourt, Rivers State
+                            No. 100, East West Road Rumuokoro,<br />
+                            Port Harcourt, Rivers State
                         </li>
                         <li>
-                        1755, 5th Floor, Forum Building, Frans Indongo<br />
-                        Street, CBD, Windhoek, Namibia
+                            1755, 5th Floor, Forum Building, Frans Indongo<br />
+                            Street, CBD, Windhoek, Namibia
                         </li>
                         <li>
                             12802 Crow Valley Ln,<br/>
