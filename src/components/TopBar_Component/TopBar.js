@@ -67,7 +67,7 @@ const TopBar = () => {
 				<div className="sub-menu-list">
 					<ul>
 						<li>
-							<img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382440/zsienergy/home_icon_pv2qiz.svg" alt="home icon" style={{height: "auto"}}/>
+							<img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717252329/zsienergy/home_icon_uybehg.svg" alt="home icon" style={{height: "auto"}}/>
 							<div className="menu-highlight">
 								<a href="/" aria-current="page" style={getHighlightStyle('/')}>
 									Home
@@ -75,7 +75,7 @@ const TopBar = () => {
 							</div>
 						</li>
 						<li>
-							<img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382706/zsienergy/product_icon_mgdf6a.svg" alt="product icon" style={{height: "auto"}}/>
+							<img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717252331/zsienergy/product_icon_tzkvdq.svg" alt="product icon" style={{height: "auto"}}/>
 							<div>
 								<a href="/products" style={getHighlightStyle('/products')}>
 									Products
@@ -83,7 +83,7 @@ const TopBar = () => {
 							</div>
 						</li>
 						<li>
-							<img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382687/zsienergy/about_us_icon_o5fvj7.svg" alt="about us icon" style={{height: "auto"}}/>
+							<img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717252328/zsienergy/about_us_icon_yxs52s.svg" alt="about us icon" style={{height: "auto"}}/>
 							<div>
 								<a href="/about" style={getHighlightStyle('/about')}>
 									About us

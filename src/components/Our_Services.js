@@ -50,7 +50,7 @@ const OurServices = () => {
                         <div className="our-services-sub-image">
                             <img
                                 src={placeholderImage}
-                                img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717019143/zsienergy/gary-sandoz-EQyUzBVBBj0-unsplash_nzewko.jpg"
+                                img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717242853/zsienergy/civil_enginerring_works_q5bgcq.jpg"
                                 alt="Civil construction project"
                                 lazy=""
                             />

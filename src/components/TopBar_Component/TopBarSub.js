@@ -13,7 +13,7 @@ const TopBarSub = () => {
             {/* mobile-no address wrapper */}
             <div className="mobile-no-address-wrapper" role="region" aria-label="Contact Information">
                 <div className="mobile-no-wrapper">
-                    <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382732/zsienergy/telephone_icon_doiezu.svg" alt="telephone icon" aria-hidden="true"/>
+                    <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717252337/zsienergy/telephone_icon_ew0il5.svg" alt="telephone icon" aria-hidden="true"/>
                     <div className="mnaw-detail">
                         <span id="mobileNumber">
                             +2348037347360<br/>
@@ -23,7 +23,7 @@ const TopBarSub = () => {
                     </div>
                 </div>
                 <div className="location-wrapper">
-                    <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382745/zsienergy/location_icon_hksfwa.svg" alt="location icon" aria-hidden="true"/>
+                    <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717252329/zsienergy/location_icon_zwm0nk.svg" alt="location icon" aria-hidden="true"/>
                     <div className="mnaw-detail">
                         <span id="address">#100 East/West Road, Rumuokoro, Port Harcourt, Rivers State, Nigeria.</span>
                     </div>

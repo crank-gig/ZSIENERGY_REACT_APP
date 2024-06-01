@@ -7,31 +7,22 @@ const Footer = () => {
         <section>
             {/* Complimentary close */}
             <div className="footer-note">
-                <div 
-                    className="footer-entry-title"
-                    style={{color: "var(--base-green)"}}
-                >
-                    ZSI Energy
-                </div>
+                <div className="footer-entry-title">ZSI Energy</div>
                 <div className="footer-note-brief">
                     Building a strong and distinctive reputation for delivering high-quality, efficient services to the energy and natural resource industry in Nigeria.
                 </div>
                 <div className="address">
                     <div>
-                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382745/zsienergy/location_icon_hksfwa.svg" alt="location icon" />
+                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717252329/zsienergy/location_icon_zwm0nk.svg" alt="location icon" />
                     </div>
                     <ul>
                         <li>
-                            No. 100, East West Road Rumuokoro,<br />
-                            Port Harcourt, Rivers State
+                        No. 100, East West Road Rumuokoro,<br />
+                        Port Harcourt, Rivers State
                         </li>
                         <li>
-                            1755, 5th Floor, Forum Building, Frans Indongo<br />
-                            Street, CBD, Windhoek, Namibia
-                        </li>
-                        <li>
-                            12802 Crow Valley Ln,<br/>
-                            Houston, TX 77099, USA
+                        1755, 5th Floor, Forum Building, Frans Indongo<br />
+                        Street, CBD, Windhoek, Namibia
                         </li>
                     </ul>
                 </div>
@@ -64,12 +55,10 @@ const Footer = () => {
             </div>
             {/* Contact info */}
             <div className="footer-connect">
-                <div className="footer-entry-title">
-                    Get in Touch
-                </div>
+                <div className="footer-entry-title">Connect</div>
                 <div className="phone-no">
                     <div>
-                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382732/zsienergy/telephone_icon_doiezu.svg" alt="Telephone icon" />
+                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717252337/zsienergy/telephone_icon_ew0il5.svg" alt="Telephone icon" />
                     </div>
                     <ul>
                         <li>+2348037347360</li>
@@ -78,7 +67,7 @@ const Footer = () => {
                 </div>
                 <div className="email">
                     <div>
-                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382762/zsienergy/email_icon_wf0hil.svg" alt="email icon" />
+                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717252329/zsienergy/email_icon_wjalw5.svg" alt="email icon" />
                     </div>
                     <ul>
                         <li>
