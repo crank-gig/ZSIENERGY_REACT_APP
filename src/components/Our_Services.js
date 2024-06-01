@@ -39,8 +39,15 @@ const OurServices = () => {
                     <div className="our-services-sub-entry" role="article" aria-labelledby="civil-construction-heading">
                         <div className="our-services-sub-image">
                             <img
+<<<<<<< Updated upstream
                             src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716037873/zsienergy/dkebufdrkevttwk5ulvh.jpg"
                             alt="Civil construction project"
+=======
+                                src={placeholderImage}
+                                img-src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717242853/zsienergy/civil_enginerring_works_q5bgcq.jpg"
+                                alt="Civil construction project"
+                                lazy=""
+>>>>>>> Stashed changes
                             />
                         </div>
                         <div className="our-services-sub-text" id="civil-construction-heading">

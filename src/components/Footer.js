@@ -13,7 +13,7 @@ const Footer = () => {
                 </div>
                 <div className="address">
                     <div>
-                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382745/zsienergy/location_icon_hksfwa.svg" alt="location icon" />
+                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717252329/zsienergy/location_icon_zwm0nk.svg" alt="location icon" />
                     </div>
                     <ul>
                         <li>
@@ -58,7 +58,7 @@ const Footer = () => {
                 <div className="footer-entry-title">Connect</div>
                 <div className="phone-no">
                     <div>
-                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382732/zsienergy/telephone_icon_doiezu.svg" alt="Telephone icon" />
+                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717252337/zsienergy/telephone_icon_ew0il5.svg" alt="Telephone icon" />
                     </div>
                     <ul>
                         <li>+2348037347360</li>
@@ -67,7 +67,7 @@ const Footer = () => {
                 </div>
                 <div className="email">
                     <div>
-                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1716382762/zsienergy/email_icon_wf0hil.svg" alt="email icon" />
+                        <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717252329/zsienergy/email_icon_wjalw5.svg" alt="email icon" />
                     </div>
                     <ul>
                         <li>
