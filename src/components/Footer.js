@@ -7,7 +7,12 @@ const Footer = () => {
         <section>
             {/* Complimentary close */}
             <div className="footer-note">
-                <div className="footer-entry-title">ZSI Energy</div>
+                <div 
+                    className="footer-entry-title"
+                    style={{color: "var(--base-green)"}}
+                >
+                    ZSI Energy
+                </div>
                 <div className="footer-note-brief">
                     Building a strong and distinctive reputation for delivering high-quality, efficient services to the energy and natural resource industry in Nigeria.
                 </div>
@@ -23,6 +28,10 @@ const Footer = () => {
                         <li>
                         1755, 5th Floor, Forum Building, Frans Indongo<br />
                         Street, CBD, Windhoek, Namibia
+                        </li>
+                        <li>
+                            12802 Crow Valley Ln,<br/>
+                            Houston, TX 77099, USA
                         </li>
                     </ul>
                 </div>
