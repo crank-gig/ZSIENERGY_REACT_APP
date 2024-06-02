@@ -64,7 +64,7 @@ const Footer = () => {
             </div>
             {/* Contact info */}
             <div className="footer-connect">
-                <div className="footer-entry-title">Connect</div>
+                <div className="footer-entry-title">Get in touch</div>
                 <div className="phone-no">
                     <div>
                         <img src="https://res.cloudinary.com/dhbj763qc/image/upload/v1717252337/zsienergy/telephone_icon_ew0il5.svg" alt="Telephone icon" />

@@ -239,7 +239,7 @@ section{
   font-size: 30px;
 }
 .top-heading-img{
-  width: 70px; 
+  width: 60px; 
   height: 80px;
 }
 
@@ -278,7 +278,7 @@ section{
   padding: 0px; 
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 .menu-list ul li{
   display: flex;  
@@ -395,6 +395,7 @@ footer section{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  gap: 10px;
 }
 .footer-note{
   max-width: 350px;
@@ -439,6 +440,7 @@ footer ul li{
   }
   .menu-list ul{
       flex-direction: row;
+      gap: 30px;
   }
   .menu-contact-button{
     margin: unset !important;
@@ -504,7 +506,7 @@ footer ul li{
     padding-top: 20px;
   }
   .top-heading-img{
-    width: 85px; 
+    width: 70px; 
     height: 90px;
   }
   .top-bar{
